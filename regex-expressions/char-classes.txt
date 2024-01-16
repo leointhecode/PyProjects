@@ -1,0 +1,47 @@
+The avaliable character classes are :
+
+\d  Any numeric digit from 0 to 9
+
+\D  Any character that is not a numeric digit from 0 to 9
+
+\w  Any letter, numeric digit, ot the underscore character (like matching "words")
+
+\W  Any character that is not a letter, numeric digit, or the underscore character
+
+\s  Any space, tab, or newline character. (Think as a matching "spaces")
+
+\S  Any character that is not a space, tab, or newline character
+
+.   Any character but the newline. (Pass re.DOTALL as the 2nd arg to re.compile to make the dot match newlines also. 
+    Pass re. I to re.compile()) to make the matching case-insensitive
+
+
+
+CREATE UR OWN classes
+
+To create your own classes when you call the re.compile, the use of [] will be required.
+
+i.e
+
+vowalRegex = re.compile(r'[aeiou]')
+
+it's equal to...
+
+vowalRegex = re.compile(r'(a|e|i|o|u)')
+
+MORE EXAMPLES
+
+vowalRegex = re.compile(r'[aeiouAEIOU]') #It founds all the upper and under case vowels.
+
+vowalRegex = re.compile(r'[aeiou {2}]') #It finds all the undercase vowels that are in the form "ae" (i.e In food the vowels "oo" would be extracted, but in hello none of them would be taken.)
+
+vowalRegex = re.compile(r'[^aeiouAEIOU]') #It's a negative pattern It will find every character in the text BUT the ones specify in the pattern
+
+^   Means the string MUST start with that pattern.
+$   Means the string MUST end with that pattern.
+
+
+--SOME COOL & USEFUL SYNTAX
+
+\w+ 1 word character or more (the more is undefined)
+\w* 0 or more word characters.

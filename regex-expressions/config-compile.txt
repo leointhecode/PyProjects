@@ -1,0 +1,7 @@
+-- The sub() regex method will substitute matches with some other text.
+
+-- Using \1, \2, and so will substitute group 1, 2, etc in the regex pattern.
+
+-- Passing re.VERBOSE as 2nd arg in re.compile, lets you add whitespace, newlines and commments to the regex string.
+
+-- If you want to pass multiple args (re.DOTALL ,re.IGNORECASE, re.VERBOSE), combine them with the | bitwise operator.
